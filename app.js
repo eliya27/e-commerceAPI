@@ -43,12 +43,12 @@ app.use(cookieParser());
 app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use("/mountainCake/api/user/", userRoute);
-app.use("/mountainCake/api/auth", authRoute);
-app.use("/mountainCake/api/product/", productRoute);
-app.use("/mountainCake/api/cart/", cartRoute);
-app.use("/mountainCake/api/order/", orderRoute);
-app.use("/mountainCake/api/payment/", stripeRoute);
+app.use("/ecommerceAPI/api/user/", userRoute);
+app.use("/ecommerceAPI/api/auth", authRoute);
+app.use("/ecommerceAPI/api/product/", productRoute);
+app.use("/ecommerceAPI/api/cart/", cartRoute);
+app.use("/ecommerceAPI/api/order/", orderRoute);
+app.use("/ecommerceAPI/api/payment/", stripeRoute);
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something is wrong";
